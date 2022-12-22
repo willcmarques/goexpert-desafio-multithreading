@@ -21,7 +21,7 @@ func main() {
 	}()
 
 	for {
-		select {
+		select { //Inseri um exit para não dar tempo de ver o resultado no log.
 		case address := <-ch1:
 			log.Println(address)
 			os.Exit(0)
